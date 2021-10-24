@@ -1,7 +1,7 @@
 from functools import lru_cache
 
-@lru_cache(maxsize=1000)
 
+@lru_cache(maxsize=1000)
 def fibonacci(n):
     """return the fibonacci number of n"""
     # check if the input is int
@@ -15,7 +15,8 @@ def fibonacci(n):
         return 1
     if n == 2:
         return 1
-    return fibonacci(n-1) + fibonacci(n-2)
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
 
 for n in range(1, 100):
     print(n, ":", fibonacci(n + 1) / fibonacci(n))
